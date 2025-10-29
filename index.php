@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +13,16 @@
 <body>
     <div class="container">
         <div class="form-box login">
-            <form action="#">
+            <form action="./handle/login_process.php" method="POST">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" required>
+                    <input type="text" name="username" id="form3Example3" class="form-control form-control-lg"
+                                placeholder="Username" required />
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" placeholder="Password" required>
+                    <input type="password" name="password" id="form3Example4" class="form-control form-control-lg"
+                                placeholder="Nhập mật khẩu" required />
                     <i class='bx bxs-lock-alt' ></i>
                 </div>
                 <div class="forgot-link">
